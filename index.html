@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/8bit-wonder" type="text/css"/>
+    <!-- minify -->
+    <link href="https://unpkg.com/nes.css@2.2.1/css/nes.min.css" rel="stylesheet" />
+    <!-- latest -->
+    <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+    <!-- core style only -->
+    <link href="https://unpkg.com/nes.css/css/nes-core.min.css" rel="stylesheet" />
+</head>
+<body>
+<div id="canvasCont">
+<canvas id="canvas"></canvas>
+    <div id="infoCont">
+        <div class="cont"><p class="title" style="color: #FF33FF">YOU</p><p class="out" id="you">23</p></div>
+        <div class="cont"><p class="title">STEPS</p><p class="out" id="steps">23</p></div>
+        <div class="cont"><p class="title" style="color: #FFB399" >AI</p><p class="out" id="ai">23</p></div>
+    </div>
+    <div id="buttonAndBlur">
+        <button type="button" class="nes-btn" id="btnFirst">Play</button>
+        <div class="nes-container with-title is-centered" id="secondCont">
+            <p class="title">Lets start</p>
+            <p>Your snake is <span id="urColor"> this color</span>, AI snake <span id="aiColor"> is this color</span>.</p>
+            <p>Press WASD to control your snake</p>
+            <button type="button" class="nes-btn" id="btnSecond">Play</button>
+        </div>
+    </div>
+</div>
+<script src="supportFuncs.js"></script>
+<script src="food.js"></script>
+<script src="snake.js"></script>
+<script src="snakeSelf.js"> </script>
+<script src="field.js"></script>
+<script src="index.js"></script>
+</body>
+</html>

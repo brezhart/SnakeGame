@@ -1,0 +1,90 @@
+html, body { height: 100%; width: 100%; margin: 0; }
+#canvasCont{
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    background-color: black;
+    box-shadow: ;
+    min-width: 200px;
+    min-height: 200px;
+
+}
+canvas{
+    width: 100%;
+    display: block;
+}
+#infoCont{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+
+}
+#infoCont .cont{
+    height: 50px;
+    width: 100%;
+}
+#infoCont .cont p{
+    font-size: 20px;
+    font-family: '8BITWONDERNominal';
+    color: white;
+    font-weight: normal;
+    font-style: normal;
+    margin: auto;
+    text-align: center;
+}
+#infoCont .cont .title{
+    line-height: 1;
+}
+#infoCont .cont .out{
+    font-size: 25px;
+
+}
+
+.blink {
+    animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+*[class^='nes'], *[class*=' nes']{
+    font-family: '8BITWONDERNominal' !important;
+}
+#buttonAndBlur{
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+#buttonAndBlur  > .nes-btn{
+    font-size: 100%;
+    width: 20%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.nes-container{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: auto;
+    width: 80%;
+    background-color: white;
+}
+#urColor{
+    color: #FF33FF;
+}
+#aiColor{
+    color: #FFB399;
+}
+#secondCont{
+    display: none;
+}
+
