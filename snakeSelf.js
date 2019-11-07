@@ -54,48 +54,41 @@ class SnakeSelf{
         this.stept = false;
     }
     setEventListener(){
-        let b = this;
-        function sup(event,getIn){
-            if (!getIn.stept) {
-                switch (event.code) {
-                    case "KeyS":
-                    case "ArrowDown":
-                        if (getIn.dir !== "NORTH") {
-                            getIn.dir = "SOUTH";
-                            getIn.stept = true;
-                        }
-                        console.log(objIn);
-                        break;
-                    case "KeyW":
-                    case "ArrowUp":
-                        if (getIn.dir !== "SOUTH") {
-                            getIn.dir = "NORTH";
-                            getIn.stept = true;
-                        }
-                        console.log(objIn);
-                        break;
-                    case "KeyA":
-                    case "ArrowLeft":
-                        if (getIn.dir !== "EAST") {
-                            getIn.dir = "WEST";
-                            getIn.stept = true;
-                        }
-                        console.log(objIn);
-                        break;
-                    case "KeyD":
-                    case "ArrowRight":
-                        if (getIn.dir !== "WEST") {
-                            getIn.dir = "EAST";
-                            getIn.stept = true;
-                        }
-                        console.log(objIn);
-                        break;
-                }
+        let thisContext = this;
+
+        let NorthBtn = document.getElementById("NorthBtn");
+        console.log(NorthBtn);
+        NorthBtn.addEventListener("click", function () {
+            console.log(thisContext);
+            if (!thisContext.stept && thisContext.dir !== "SOUTH"){
+                console.log("YEEEEEEEEES");
+                thisContext.dir = "NORTH";
+                console.log(thisContext.dirObj.dir);
+                thisContext.stept = true;
             }
-        }
-        window.addEventListener("keydown", function(event) {
-            sup(event,b)
         });
+        let EastBtn = document.getElementById("EastBtn");
+        EastBtn.addEventListener("click", function(){
+            if (!thisContext.stept && thisContext.dir !== "WEST"){
+                thisContext.dir = "EAST";
+                thisContext.stept = true;
+            }
+        });
+        let SouthBtn = document.getElementById("SouthBtn");
+        SouthBtn.addEventListener("click", function(){
+            if (!thisContext.stept && thisContext.dir !== "NORTH"){
+                thisContext.dir = "SOUTH";
+                thisContext.stept = true;
+            }
+        });
+        let WestBtn = document.getElementById("WestBtn");
+        WestBtn.addEventListener("click",  function(){
+            if (!thisContext.stept && thisContext.dir !== "EAST"){
+                thisContext.dir = "WEST";
+                thisContext.stept = true;
+            }
+        });
+
     }
 
     draw(ctx,w,h,field){

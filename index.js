@@ -61,6 +61,7 @@ function newGame(whoPlays) {
         snakes.push(new Snake(11, 11, youArrPos, field, colors[2]));
     } else {
         var self = new SnakeSelf(youArrPos, field, colors[2]);
+        console.log("SELFACTIVATE");
         self.setEventListener(self.dirObj);
         snakes.push(self);
     }

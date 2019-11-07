@@ -69,7 +69,6 @@ class Field{
     makeWall(x1,y1,x2,y2){
         for (let i = 0; i < y2-y1+1; i++){
             for (let g = 0; g < x2-x1+1; g++){
-                console.log(i,g,y1+i,x1+g,y2-y1);
                 this.area[y1+i][x1+g] = "W";
 
             }

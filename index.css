@@ -87,4 +87,40 @@ canvas{
 #secondCont{
     display: none;
 }
+#buttons{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 200px;
+    height: 200px;
+}
+.controls{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+}
+#NorthBtn{
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+}
+#EastBtn{
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+}
+#SouthBtn{
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+}
+#WestBtn{
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+}
 
