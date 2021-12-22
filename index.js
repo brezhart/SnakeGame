@@ -33,10 +33,14 @@ function newGame(whoPlays) {
     youOut.style.animation = "";
 
     field = new Field(41, 41);
-    field.makeWall((field.w + 1) / 2 - 5, (field.h + 1) / 2 - 12, (field.w  + 1)/ 2  + 5, (field.h + 1) / 2 - 12); //
-    field.makeWall((field.w + 1) / 2 - 5, (field.h + 1) / 2 + 12, (field.w  + 1)/ 2  + 5, (field.h + 1) / 2 + 12);// horizontal walls
-    field.makeWall((field.w + 1) / 2 - 12, (field.h + 1) / 2 - 5, (field.w  + 1)/ 2  - 12, (field.h + 1) / 2 + 5); //
-    field.makeWall((field.w + 1) / 2 + 12, (field.h + 1) / 2 - 5, (field.w  + 1)/ 2  + 12, (field.h + 1) / 2 + 5);//vertical walls
+//     field.makeWall((field.w + 1) / 2 - 5, (field.h + 1) / 2 - 12, (field.w  + 1)/ 2  + 5, (field.h + 1) / 2 - 12); //
+//     field.makeWall((field.w + 1) / 2 - 5, (field.h + 1) / 2 + 12, (field.w  + 1)/ 2  + 5, (field.h + 1) / 2 + 12);// horizontal walls
+//     field.makeWall((field.w + 1) / 2 - 12, (field.h + 1) / 2 - 5, (field.w  + 1)/ 2  - 12, (field.h + 1) / 2 + 5); //
+//     field.makeWall((field.w + 1) / 2 + 12, (field.h + 1) / 2 - 5, (field.w  + 1)/ 2  + 12, (field.h + 1) / 2 + 5);//vertical walls
+    field.makeWall((field.w + 1) / 2 - 5, (field.h + 1) / 2, (field.w  + 1)/ 2  + 5, (field.h + 1) / 2); //
+    //field.makeWall((field.w + 1) / 2 - 5, (field.h + 1) / 2 + 12, (field.w  + 1)/ 2  + 5, (field.h + 1) / 2 + 12);// horizontal walls
+    field.makeWall((field.w + 1) / 2, (field.h + 1) / 2 - 5, (field.w  + 1)/ 2 , (field.h + 1) / 2 + 5); //
+    //field.makeWall((field.w + 1) / 2 + 12, (field.h + 1) / 2 - 5, (field.w  + 1)/ 2  + 12, (field.h + 1) / 2 + 5);//vertical walls
     snakes = [];
 
     for (let i = 0; i < 50; i++) {
